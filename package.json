@@ -9,13 +9,16 @@
     "start": "node dist/server.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
+    "format:check": "prettier . --check",
+    "format:fix": "prettier . --fix",
     "prepare": "husky"
   },
   "author": "Shahil",
   "license": "ISC",
   "lint-staged": {
     "*.ts": [
-      "npm run lint:fix"
+      "npm run lint:fix",
+      "npm run format:fix"
     ]
   },
   "devDependencies": {
@@ -25,11 +28,13 @@
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.6.0",
     "eslint": "^9.11.1",
-    "eslint-plugin-react": "^7.36.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.9.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "nodemon": "^3.1.7",
+    "prettier": "3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.7.0"
